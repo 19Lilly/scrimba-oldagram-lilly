@@ -33,8 +33,7 @@ let sectionEl = document.getElementById("section-el")
     for (let i = 0; i < posts.length; i++){
 
        sectionEl.innerHTML += 
-       `<div class="container">
-        <div class="post">
+       `<div class="post">
                 <div class="post-header">
                         <img class="img-header" src="${posts[i].avatar}">
                         <div class="header-info">
@@ -55,7 +54,6 @@ let sectionEl = document.getElementById("section-el")
                         <div class="username bold-text">${posts[i].username}</div>
                         <div class="comment">${posts[i].comment}</div>
                     </div>
-            </div>
         </div>`
       
     }

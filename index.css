@@ -2,14 +2,17 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Source Sans Pro', sans-serif; 
+   
 }
 
 body{
     margin: 0 auto;
     width: 375px;
+    background-color: #C6C6C6;
 }
 
 header{
+    background-color: #ffffff;
     width: 345px;
     display: flex;
     justify-content: space-between;
@@ -18,12 +21,9 @@ header{
     padding: 15px;
 }
 
-.container{
-    background-color: #EDEDED;
-}
-
 .post{
-    background-color: #fff;
+    background-color: #ffffff;
+    border-bottom: solid 25px #c6c6c6;
 }
 
 .user-avatar,
