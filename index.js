@@ -50,10 +50,9 @@ let sectionEl = document.getElementById("section-el")
                         <img class="icons" src="images/icon-dm.png">
                     </div>
                     <div class="like-count bold-text"> ${posts[i].likes} likes</div>
-                    <div class="comments">
-                        <div class="username bold-text">${posts[i].username}</div>
-                        <div class="comment">${posts[i].comment}</div>
-                    </div>
+                    <p class="comments">
+                        <span class="username bold-text">${posts[i].username}</span>${posts[i].comment}  
+                    </p>
         </div>`
       
     }

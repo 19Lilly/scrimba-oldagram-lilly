@@ -83,17 +83,18 @@ header{
     opacity: 50%;
 }
 
-.like-count,
-.username{
+.like-count{
     padding-left: 13px;
-    padding-right: 7px;
-    
+    padding-right: 7px;  
 }
 
 .comments{
-    display: flex;
-    justify-content: flex-start;
-    padding: 12px 0;
+    padding: 0 13px;
+    font-size: 13px;
+}
+
+.username{
+    padding-right: 5px;
 }
 
 
