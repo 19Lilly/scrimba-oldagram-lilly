@@ -8,8 +8,9 @@ html, body {
 body{
     margin: 0 auto;
     width: 375px;
-    background-color: #C6C6C6;
+    background-color: #EDEDED;
 }
+
 
 header{
     background-color: #ffffff;
@@ -23,7 +24,7 @@ header{
 
 .post{
     background-color: #ffffff;
-    border-bottom: solid 25px #c6c6c6;
+    border-bottom: solid 25px #EDEDED;
 }
 
 .user-avatar,
