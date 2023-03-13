@@ -30,6 +30,7 @@ const posts = [
 
 let sectionEl = document.getElementById("section-el")
 
+
     for (let i = 0; i < posts.length; i++){
 
        sectionEl.innerHTML += 
@@ -45,18 +46,31 @@ let sectionEl = document.getElementById("section-el")
                     <img class="post-img" src="${posts[i].post}">
                     
                     <div class="social-media">
-                        <img class="icons" src="images/icon-heart.png">
+                        <button id="click-me"><img class="icons" src="images/icon-heart.png"></button>
                         <img class="icons" src="images/icon-comment.png">
                         <img class="icons" src="images/icon-dm.png">
                     </div>
-                    <div class="like-count bold-text"> ${posts[i].likes} likes</div>
+                    <div id="like-count" class="bold-text"> ${posts[i].likes} likes</div>
                     <p class="comments">
                         <span class="username bold-text">${posts[i].username}</span>${posts[i].comment}  
                     </p>
         </div>`
-      
-    }
 
+      
+}
+
+
+
+
+
+
+
+
+
+
+
+
+    
 
                 
 

@@ -27,6 +27,11 @@ header{
     border-bottom: solid 25px #EDEDED;
 }
 
+button{
+    background-color: #ffffff;
+    border: none;
+}
+
 .user-avatar,
 .img-header{
     height: 34px;
@@ -83,7 +88,7 @@ header{
     opacity: 50%;
 }
 
-.like-count{
+#like-count{
     padding-left: 13px;
     padding-right: 7px;  
 }
