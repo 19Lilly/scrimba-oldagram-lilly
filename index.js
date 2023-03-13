@@ -28,3 +28,39 @@ const posts = [
     }
 ]
 
+let sectionEl = document.getElementById("section-el")
+
+    for (let i = 0; i < posts.length; i++){
+
+       sectionEl.innerHTML += 
+       `<div class="container">
+        <div class="post">
+                <div class="post-header">
+                        <img class="img-header" src="${posts[i].avatar}">
+                        <div class="header-info">
+                            <div class="user-full-name"><span class="bold-text">${posts[i].name}</span></div>
+                            <div class="user-location">${posts[i].location}</div>
+                        </div>
+                    </div>
+
+                    <img class="post-img" src="${posts[i].post}">
+                    
+                    <div class="social-media">
+                        <img class="icons" src="images/icon-heart.png">
+                        <img class="icons" src="images/icon-comment.png">
+                        <img class="icons" src="images/icon-dm.png">
+                    </div>
+                    <div class="like-count bold-text"> ${posts[i].likes} likes</div>
+                    <div class="comments">
+                        <div class="username bold-text">${posts[i].username}</div>
+                        <div class="comment">${posts[i].comment}</div>
+                    </div>
+            </div>
+        </div>`
+      
+    }
+
+
+                
+
+

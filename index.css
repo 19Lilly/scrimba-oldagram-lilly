@@ -10,13 +10,20 @@ body{
 }
 
 header{
-    width: 375px;
-    height: 67px;
+    width: 345px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
     border-bottom: 1px solid #C6C6C6;
+    padding: 15px;
+}
+
+.container{
+    background-color: #EDEDED;
+}
+
+.post{
+    background-color: #fff;
 }
 
 .user-avatar,
@@ -31,7 +38,65 @@ header{
 }
 
 .post-header{
-    padding: 10px 20px;
+    padding: 10px;
+    display: flex;
 }
+
+.header-info{
+       display: block;
+       padding-left: 10px;
+}
+
+.bold-text{
+    font-weight: 700;
+}
+
+.user-full-name{
+    font-size: 13px;
+}
+
+.user-location{
+    font-size: 12px;
+}
+
+.post-img {
+    height: 375px;
+    width: 375px;  
+}
+
+.social-media{
+    width: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 10px;
+}
+
+.icons{
+    width: 25px;
+    height: 25px;
+}
+
+.icons:hover,
+.icons:focus{
+    opacity: 50%;
+}
+
+.like-count,
+.username{
+    padding-left: 13px;
+    padding-right: 7px;
+    
+}
+
+.comments{
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px 0;
+}
+
+
+
+
 
 
