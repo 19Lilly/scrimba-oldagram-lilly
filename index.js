@@ -55,44 +55,48 @@ function handleLikeClick(postId){
     }
     targetOldagramPost.isLiked = !targetOldagramPost.isLiked
     console.log(targetOldagramPost.likes)
-    renderPost(posts)
+    render()
 }
 
 
 
+function getFeedHtml(){
+    let feedHtml = ``
+    
+    posts.forEach(function(post){
+        feedHtml +=     
+        `<div class="post">
+        <div class="post-header">
+                <img class="img-header" src="${post.avatar}">
+                <div class="header-info">
+                    <div class="user-full-name"><span class="bold-text">${post.name}</span></div>
+                    <div class="user-location">${post.location}</div>
+                </div>
+            </div>
 
-function renderPost(posts){
-    let sectionEl = document.getElementById("section-el")
-    for (let i = 0; i < posts.length; i++){
-       
-
-       sectionEl.innerHTML += 
-       `<div class="post">
-                <div class="post-header">
-                        <img class="img-header" src="${posts[i].avatar}">
-                        <div class="header-info">
-                            <div class="user-full-name"><span class="bold-text">${posts[i].name}</span></div>
-                            <div class="user-location">${posts[i].location}</div>
-                        </div>
-                    </div>
-
-                    <img class="post-img" src="${posts[i].post}">
-                    
-                    <div class="social-media">
-                        <img data-like="${posts[i].uuid}"class="icons" src="images/icon-heart.png">
-                        <img class="icons" src="images/icon-comment.png">
-                        <img class="icons" src="images/icon-dm.png">
-                    </div>
-                    <div id="like-count" class="bold-text"> ${posts[i].likes} likes</div>
-                    <p class="comments">
-                        <span class="username bold-text">${posts[i].username}</span>${posts[i].comment}  
-                    </p>
+            <img class="post-img" src="${post.post}">
+            
+            <div class="social-media">
+                <img data-like="${post.uuid}"class="icons" src="images/icon-heart.png">
+                <img class="icons" src="images/icon-comment.png">
+                <img class="icons" src="images/icon-dm.png">
+            </div>
+            <div id="like-count" class="bold-text"> ${post.likes} likes</div>
+            <p class="comments">
+                <span class="username bold-text">${post.username}</span>${post.comment}  
+            </p>
         </div>`
-      
-}
+
+   })
+   return feedHtml 
 }
 
-renderPost(posts)
+function render(){
+    document.getElementById('section-el').innerHTML = getFeedHtml()
+}
+
+
+render()
 
 
 
