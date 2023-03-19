@@ -27,11 +27,6 @@ header{
     border-bottom: solid 25px #EDEDED;
 }
 
-button{
-    background-color: #ffffff;
-    border: none;
-}
-
 .user-avatar,
 .img-header{
     height: 34px;
