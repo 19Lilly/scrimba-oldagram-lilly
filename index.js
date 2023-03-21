@@ -1,12 +1,19 @@
 
-import { posts } from './data.js'
+//import { posts } from './data.js'
 
-// const postFromLocalStorage = JSON.parse( localStorage.getItem('post'))
+const storedData = localStorage.getItem('posts')
 
+let posts = ''
+if(storedData){
+    posts = JSON.parse(storedData)
+} 
+else {
+    posts = require('./data.js')
+}
 
-console.log(localStorage.setItem('post', JSON.stringify(posts)));
 
 document.addEventListener('click', function(e){
+    
     if(e.target.dataset.like){
        handleLikeClick(e.target.dataset.like) 
     }
@@ -28,14 +35,16 @@ function handleLikeClick(postId){
     }
 
     targetOldagramPost.isLiked = !targetOldagramPost.isLiked
+    updateLocalStorage(posts)
     render()
 }
 
 
 function getFeedHtml(){
+    
     let feedHtml = ``
 
-    posts.forEach(function(post){
+        posts.forEach(function(post){
 
         let likeIconClass = ''
         
@@ -43,7 +52,6 @@ function getFeedHtml(){
             likeIconClass = 'liked'
         }
 
-        
 
         feedHtml +=     
         `<div class="post">
@@ -70,15 +78,22 @@ function getFeedHtml(){
 
    })
    return feedHtml 
-  
+   
+}
+
+function updateLocalStorage(posts){
+    localStorage.setItem('posts', JSON.stringify(posts))
 }
 
 function render(){
     document.getElementById('section-el').innerHTML = getFeedHtml()
 }
-
-
 render()
+
+
+
+
+
 
 
 
