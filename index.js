@@ -1,5 +1,5 @@
 
-//import { posts } from './data.js'
+import { posts } from './data.js'
 
 const storedData = localStorage.getItem('posts')
 
