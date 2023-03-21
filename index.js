@@ -36,6 +36,9 @@ function handleLikeClick(postId){
     render()
 }
 
+function updateLocalStorage(posts){
+    localStorage.setItem('posts', JSON.stringify(posts))
+}
 
 function getFeedHtml(){
     
@@ -78,9 +81,7 @@ function getFeedHtml(){
    
 }
 
-function updateLocalStorage(posts){
-    localStorage.setItem('posts', JSON.stringify(posts))
-}
+
 
 function render(){
     document.getElementById('section-el').innerHTML = getFeedHtml()
