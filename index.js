@@ -6,7 +6,7 @@ if(storedData){
     posts = JSON.parse(storedData)
 } 
 else {
-    posts = require('./data.js')
+     const posts = require('./data.js')
 }
 
 document.addEventListener('click', function(e){
