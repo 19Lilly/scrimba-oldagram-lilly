@@ -74,11 +74,6 @@ function getFeedHtml(){
 }
 
 
-
-/* function render(){
-    document.getElementById('section-el').innerHTML = getFeedHtml()
-} */
-
 function render(){
     document.getElementById('section-el').innerHTML = getFeedHtml()
     localStorage.setItem("posts", JSON.stringify(postData))
@@ -90,7 +85,7 @@ if(localStorage.getItem("posts")){
 else{
     postData = postsData  
 }
-xl
+
 render()
 
 
