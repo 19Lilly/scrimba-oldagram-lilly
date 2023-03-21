@@ -11,7 +11,6 @@ else {
     posts = require('./data.js')
 }
 
-
 document.addEventListener('click', function(e){
     
     if(e.target.dataset.like){
