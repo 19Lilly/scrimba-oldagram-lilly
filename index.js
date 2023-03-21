@@ -1,12 +1,14 @@
 
+
 const storedData = localStorage.getItem('posts')
 
 let posts = ''
+
 if(storedData){
     posts = JSON.parse(storedData)
 } 
 else {
-     const posts = require('./data.js')
+     posts = require('./data.js')
 }
 
 document.addEventListener('click', function(e){
