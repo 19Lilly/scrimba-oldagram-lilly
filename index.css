@@ -73,9 +73,12 @@ header{
     padding: 20px 10px;
 }
 
-.icons{
-    width: 25px;
-    height: 25px;
+i{
+       color:#C6C6C6;
+}
+
+.liked{
+    color: red;
 }
 
 .icons:hover,
