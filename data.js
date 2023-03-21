@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'https://jspm.dev/uuid'
 
-export const posts = [
+export const postsData = [
     {
         name: "Vincent van Gogh",
         username: "vincey1853",
