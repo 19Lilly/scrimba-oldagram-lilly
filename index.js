@@ -24,7 +24,6 @@ function handleLikeClick(postId){
     }
     else{
         targetOldagramPost.likes++ 
-        //localStorage.setItem("posts", JSON.stringify(postData))    
     }
 
     targetOldagramPost.isLiked = !targetOldagramPost.isLiked
@@ -59,9 +58,9 @@ function getFeedHtml(){
             <img class="post-img" src="${post.post}">
             
             <div class="social-media">
-                <i data-like="${post.uuid}" class="fa-solid fa-heart fa-lg ${likeIconClass}"></i>
-                <i class="fa-regular fa-comment fa-lg"></i>
-                <i class="fa-regular fa-paper-plane fa-lg"></i>
+                <i data-like="${post.uuid}" class="fa-solid fa-heart fa-xl ${likeIconClass}"></i>
+                <i class="fa-regular fa-comment fa-xl"></i>
+                <i class="fa-regular fa-paper-plane fa-xl"></i>
             </div>
             <div id="like-count" class="bold-text"> ${post.likes} likes</div>
             <p class="comments">
@@ -91,10 +90,7 @@ if(localStorage.getItem("posts")){
 else{
     postData = postsData  
 }
- 
-
-
-
+xl
 render()
 
 
