@@ -1,6 +1,4 @@
 
-import { posts } from './data.js'
-
 const storedData = localStorage.getItem('posts')
 
 let posts = ''
