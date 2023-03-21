@@ -1,7 +1,10 @@
 
-import { posts} from './data.js'
+import { posts } from './data.js'
+
+// const postFromLocalStorage = JSON.parse( localStorage.getItem('post'))
 
 
+console.log(localStorage.setItem('post', JSON.stringify(posts)));
 
 document.addEventListener('click', function(e){
     if(e.target.dataset.like){
@@ -31,7 +34,7 @@ function handleLikeClick(postId){
 
 function getFeedHtml(){
     let feedHtml = ``
-    
+
     posts.forEach(function(post){
 
         let likeIconClass = ''
@@ -39,6 +42,8 @@ function getFeedHtml(){
         if (post.isLiked){
             likeIconClass = 'liked'
         }
+
+        
 
         feedHtml +=     
         `<div class="post">
@@ -65,6 +70,7 @@ function getFeedHtml(){
 
    })
    return feedHtml 
+  
 }
 
 function render(){
@@ -73,6 +79,7 @@ function render(){
 
 
 render()
+
 
 
 
